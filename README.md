@@ -1,12 +1,10 @@
-# Fork of [Joshua Comeau's `new-component` CLI utility](https://github.com/joshwcomeau/new-component)...
+# Fork of Joshua Comeau's `new-component` CLI utility
 
-...with default TypeScript support, fixed config. Also without React import, [no longer needed in React 17](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html).
+with specific templates used to create components for the [OpenLens](https://github.com/lensapp/lens) app
 
-I contributed to the upstream but I am afraid that it will not be noticed ([original repo looks a little bit abandoned](https://github.com/joshwcomeau/new-component/pulls)), so I hope this repo with features that were essential for me, will help some of you with making React components with more ease 😌
+To use `new-component` utility for your specific project, please open original Joshua repository https://github.com/joshwcomeau/new-component.
 
-The rest of README is just the original text with some tweaks needed to explain features added by me.
-
-Enjoy!
+**Do not use it anywhere except OpenLens** because it contains Lens-specific comments at the top of the files.
 
 ---
 
