@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+const lodash = require('lodash');
 
 const program = require('commander');
 
@@ -68,14 +69,17 @@ const templateFileExtension = program.language === 'ts' ? 'tsx' : 'js';
 // Find the path to the selected template file.
 const templatePath = `./templates/${program.language}/${program.type}.${templateFileExtension}`;
 
+// Convert to kebab-case
+const dirName = lodash.kebabCase(componentName);
+
 // Get all of our file paths worked out, for the user's project.
-const componentDir = `${program.dir}/${componentName}`;
-const filePath = `${componentDir}/${componentName}.${componentFileExtension}`;
+const componentDir = `${program.dir}/${dirName}`;
+const filePath = `${componentDir}/${dirName}.${componentFileExtension}`;
 const indexPath = `${componentDir}/index.${program.language}`;
 
 // Our index template is super straightforward, so we'll just inline it for now.
 const indexTemplate = prettify(`\
-export { default } from './${componentName}';
+export * from './${dirName}';
 `);
 
 logIntro({ name: componentName, dir: componentDir, type: program.type, language: program.language });

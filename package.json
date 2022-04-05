@@ -1,6 +1,6 @@
 {
   "name": "new-component",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "CLI for creating new React components",
   "homepage": "https://github.com/joshwcomeau/new-component",
   "repository": {
@@ -29,6 +29,7 @@
   "dependencies": {
     "chalk": "^2.4.1",
     "commander": "^2.15.1",
+    "lodash": "^4.17.21",
     "prettier": "1.5.3"
   },
   "devDependencies": {

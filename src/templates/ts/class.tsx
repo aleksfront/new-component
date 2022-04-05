@@ -1,9 +1,28 @@
-import { Component } from 'react';
+/**
+ * Copyright (c) OpenLens Authors. All rights reserved.
+ * Licensed under MIT License. See LICENSE in root directory for more information.
+ */
 
-class COMPONENT_NAME extends Component {
-  render() {
-    return <div>Test content</div>;
-  }
+import "./styles.module.css";
+
+import React from "react";
+import { observer } from "mobx-react";
+import { makeObservable } from "mobx";
+
+interface Props {
+
 }
 
-export default COMPONENT_NAME;
+@observer
+export class COMPONENT_NAME extends React.Component<Props> {
+  constructor(props: Props) {
+    super(props);
+    makeObservable(this);
+  }
+
+  render() {
+    return (
+      <div></div>
+    );
+  }
+}
